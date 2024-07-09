@@ -8,11 +8,9 @@ namespace 景区系统.Application;
 public class SystemAppService : IDynamicApiController
 {
     private readonly ISystemService _systemService;
-    private readonly IRepository<Menu> repository;
-    public SystemAppService(ISystemService systemService, IRepository<Menu> repository)
+    public SystemAppService(ISystemService systemService)
     {
         _systemService = systemService;
-        this.repository = repository;
     }
 
     /// <summary>
