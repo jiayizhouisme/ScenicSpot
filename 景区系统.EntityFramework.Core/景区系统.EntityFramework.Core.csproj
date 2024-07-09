@@ -9,6 +9,7 @@
 
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Cores\Core.EntityFrameWork\Core.EntityFrameWork.csproj" />
 		<ProjectReference Include="..\景区系统.Core\景区系统.Core.csproj" />
 	</ItemGroup>
 

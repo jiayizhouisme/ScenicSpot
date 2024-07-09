@@ -1,4 +1,6 @@
-﻿namespace 景区系统.Application;
+﻿using 景区系统.Core.Entity;
+
+namespace 景区系统.Application;
 
 /// <summary>
 /// 系统服务接口
@@ -6,9 +8,11 @@
 public class SystemAppService : IDynamicApiController
 {
     private readonly ISystemService _systemService;
-    public SystemAppService(ISystemService systemService)
+    private readonly IRepository<Menu> repository;
+    public SystemAppService(ISystemService systemService, IRepository<Menu> repository)
     {
         _systemService = systemService;
+        this.repository = repository;
     }
 
     /// <summary>

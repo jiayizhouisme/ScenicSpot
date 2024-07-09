@@ -1,4 +1,6 @@
-﻿using Furion;
+﻿using Core.Auth;
+using Core.Auth.Handler;
+using Furion;
 using Furion.VirtualFileServer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,7 +15,7 @@ public class Startup : AppStartup
     {
         services.AddConsoleFormatter();
         services.AddJwt<JwtHandler>();
-
+        services.AddScoped<IHttpContextUser, JwtUserContext>();
         services.AddCorsAccessor();
 
         services.AddControllersWithViews()

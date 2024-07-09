@@ -15,7 +15,7 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -23,6 +23,7 @@
 
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Cores\Core.EntityFrameWork\Core.EntityFrameWork.csproj" />
 		<ProjectReference Include="..\景区系统.Web.Core\景区系统.Web.Core.csproj" />
 	</ItemGroup>
 
