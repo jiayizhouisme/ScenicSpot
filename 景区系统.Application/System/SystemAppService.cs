@@ -1,4 +1,5 @@
-﻿using 景区系统.Core.Entity;
+﻿using Furion.DatabaseAccessor.Extensions;
+using 景区系统.Core.Entity;
 
 namespace 景区系统.Application;
 
@@ -8,16 +9,18 @@ namespace 景区系统.Application;
 public class SystemAppService : IDynamicApiController
 {
     private readonly ISystemService _systemService;
-    public SystemAppService(ISystemService systemService)
+    private readonly IRepository<Menu> repository;
+    public SystemAppService(ISystemService systemService, IRepository<Menu> repository)
     {
         _systemService = systemService;
+        this.repository = repository;
     }
 
     /// <summary>
     /// 获取系统描述
     /// </summary>
     /// <returns></returns>
-    public string GetDescription()
+    public async Task<string> GetDescription()
     {
         return _systemService.GetDescription();
     }

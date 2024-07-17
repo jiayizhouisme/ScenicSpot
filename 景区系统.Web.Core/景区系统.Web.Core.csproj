@@ -15,6 +15,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\Cores\Core.Cache\Core.Cache.csproj" />
+		<ProjectReference Include="..\..\Cores\Core.MiddelWares\Core.MiddelWares.csproj" />
 		<ProjectReference Include="..\景区系统.Application\景区系统.Application.csproj" />
 		<ProjectReference Include="..\景区系统.Database.Migrations\景区系统.Database.Migrations.csproj" />
 	</ItemGroup>
